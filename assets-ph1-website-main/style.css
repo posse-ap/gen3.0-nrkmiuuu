@@ -205,7 +205,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 8px;
 }
 
-/* POSSSEとは　写真、文 */
+/* POSSSEとは 写真、文 */
 .p-top-about__body {
     display: grid;
     gap: 40px;
@@ -278,11 +278,11 @@ svg, img, embed, object, iframe {
 
 .u-icon__line{
     content: url(icon-line.svg); 
+    background: radial-gradient(#fff 60%, transparent 60%);
     height: 40px;
     width: 40px;
 }
 .u-icon__line:before {
-    background: radial-gradient(#fff 60%, transparent 60%);
     color: #00c300;
     content: "\e900";
 }
@@ -425,11 +425,9 @@ a {
 
 .u-icon__link__dark{
     content: url(icon-link-dark.svg); 
+    float:right
+    /* 右寄せしたい */
 }
-
-
-
-
 
 .l-footer__inner {
     padding: 56px 24px 48px;
@@ -603,7 +601,7 @@ main {
 
 /* ITクイズ写真 */
 .p-quiz-hero {
-    background: url(study.jpg) center center/cover;
+    background: url(./quiz/study.jpg) center center/cover;
     padding-left: 204px;
     padding-top: 104px;
 }
@@ -734,7 +732,14 @@ button, input, optgroup, select, textarea {
 .p-quiz-box__answer__button .u-icon__arrow {
     font-size: 16px;
     margin-left: auto;
+
+}.u-icon__arrow{
+    content: url(./js/icon-arrow.svg); 
+    float:right
+    /* 右寄せしたい */
 }
+
+
 .p-quiz-box__answer__correct__title {
     font-size: 24px;
     font-weight: bold;
@@ -751,8 +756,37 @@ button, input, optgroup, select, textarea {
     margin-top: 16px;
 }
 .p-quiz-box__answer__correct__content__label {
+    display: none;
     font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
     font-size: 24px;
+}
+
+
+/* .p-quiz-box__answer__correct.is-incorrect{
+    background-color: grey;
+    display: block;
+} */
+
+.p-quiz-box__answer__correct.is-incorrect{
+    display: block;
+}
+
+.p-quiz-box__answer__correct.is-incorrect{
+    background-color:#f0f8ff;
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 24px 40px;
+}
+
+.p-quiz-box__answer__correct.is-correct{
+    display: block;
+}
+
+.p-quiz-box__answer__correct.is-correct{
+    background-color: pink;
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 24px 40px;
 }
 
 /* 経済産業省 */
@@ -1065,4 +1099,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
     font-weight: inherit;
     margin: 0;
+}
+
+/* ITクイズとQ1の間 */
+.p-quiz-container {
+    margin-top: 120px;
 }

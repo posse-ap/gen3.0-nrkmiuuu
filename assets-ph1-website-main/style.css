@@ -1,0 +1,1107 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    /* 「iPhoneを横向きにした時、縦向きの時に対して文字サイズをどうするか」 というプロパティ */
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1.15;
+    /* line-heightプロパティを使えば、文字の行間を調節 */
+}
+
+/* header class="1-header p-header" */
+*,
+::before,
+::after {
+    border-style: solid;
+    border-width: 0;
+    box-sizing: border-box;
+}
+
+/* posse logo */
+img {
+    max-width: 100%;
+    /* 「画像の大きさの最大値」が「親要素のwidth幅の100%の値」 */
+}
+
+/* トップページ、クイズ */
+
+/* トップページとクイズを横並び */
+.p-header__nav__list {
+    display: flex;
+    gap: 32px;
+}
+
+.p-header__nav{
+    display: flex;
+    gap: 15px;
+}
+
+.p-header__nav {
+    margin-left: auto;
+}
+
+.p-header__nav__item__link {
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    /* フォントの太さが700 */
+    letter-spacing: 0.1em;
+    /* 文字間の隙間を指定 */
+}
+
+ul, ol {
+    list-style: none;
+    /* リストのマークをスタイルシートにて表示しないにする */
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+a {
+    background-color: transparent;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Twitter、Instagram */
+/* ヘッダーのロゴ横並び */
+.p-sns {
+    display: flex;
+    gap: 20px;
+}
+
+.p-header__sns{
+    display: flex;
+    gap: 15px;
+    margin-left: 15px;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.p-header {
+    /* position: fixed; やったら短くなっちゃう */
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    padding: 15px 24px;
+}
+
+.l-header {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    /* z-indexはボックスの重なりの優先順位を指定するプロパティ */
+}
+
+/* main class="1-main" */
+.l-main {
+    padding-top: 80px;
+}
+main {
+    display: block;
+}
+
+/* 自分史上最高を仲間と */
+.p-top-hero__inner {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1280px;
+    position: relative;
+}
+
+.p-top-hero__body {
+    align-self: center;
+    background-color: #eff2f5;
+    border-radius: 24px;
+    display: inline-block;
+    padding: 50px 62px;
+    position: relative;
+    white-space: nowrap;
+}
+.p-top-hero__body__title {
+    color: #0071bc;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+.p-top-hero__body__catchcopy {
+    display: inline-block;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 1.3333;
+    margin-top: 10px;
+}
+
+/* 三人の写真 */
+.p-top-hero__image {
+    border-radius: 80px 0 0 80px;
+    display: block;
+    margin-left: -125px;
+    margin-right: calc(50% - 50vw);
+    max-height: 680px;
+    overflow: hidden;
+}
+
+.p-top-hero__image img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* scroll */
+.p-top-hero__scroll {
+    align-items: center;
+    bottom: 24px;
+    display: inline-flex;
+    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+    font-size: 14px;
+    gap: 6px;
+    left: 32px;
+    line-height: 1.5;
+    position: absolute;
+}
+
+/* POSSEとは */
+.p-top-container {
+    margin-top: 96px;
+}
+.l-container {
+    margin: 0 auto;
+    max-width: 1032px;
+    padding: 0 24px;
+    width: 100%;
+}
+.p-heading {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    text-align: center;
+}
+.p-heading__caption {
+    color: #0071bc;
+    display: block;
+    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+    font-size: 14px;
+    letter-spacing: initial;
+    line-height: 1.8;
+    margin-top: 8px;
+}
+
+/* POSSSEとは 写真、文 */
+.p-top-about__body {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 42px;
+}
+
+.p-top-about__image {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+.p-top-about__content {
+    align-self: center;
+    font-size: 14px;
+    line-height: 1.8;
+}
+p, table, blockquote, address, pre, iframe, form, figure, dl {
+    margin: 0;
+}
+
+/* ↓よくわからない */
+svg, img, embed, object, iframe {
+    vertical-align: bottom;
+}
+
+/* 公式LINE */
+.p-line {
+    margin-top: 144px;
+}
+.l-container {
+    margin: 0 auto;
+    max-width: 1032px;
+    padding: 0 24px;
+    width: 100%;
+}
+.p-line__body {
+    background: url(./rooftop.jpg) center center/cover;
+    border-radius: 56px;
+    overflow: hidden;
+    padding: 68px;
+    position: relative;
+}
+
+/* 半透明な青をかぶせたい */
+.p-line__body {
+    background: url(rooftop.jpg) center center/cover;
+    border-radius: 56px;
+    overflow: hidden;
+    padding: 68px;
+    position: relative;
+}
+.p-line__body::before {
+    background-color: rgba(0, 113, 188, 0.9);
+    /* opacity: 0.5; */
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.p-line__body__inner {
+    position: relative;
+}
+
+.u-icon__line{
+    content: url(icon-line.svg); 
+    background: radial-gradient(#fff 60%, transparent 60%);
+    height: 40px;
+    width: 40px;
+}
+.u-icon__line:before {
+    color: #00c300;
+    content: "\e900";
+}
+
+.p-heading.-light {
+    color: #fff;
+}
+.p-line__title {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+.p-heading {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+}
+.p-line__title .u-icon__line {
+    font-size: 40px;
+}
+
+.p-line__content {
+    color: #eee;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+    margin-top: 16px;
+    text-align: center;
+}
+p, table, blockquote, address, pre, iframe, form, figure, dl {
+    margin: 0;
+}
+
+/* LINE追加 */
+.p-line__footer {
+    margin-top: 16px;
+    text-align: center;
+}
+.p-line__button {
+    background-color: #fff;
+    border-radius: 50px;
+    color: #333;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+    max-width: 320px;
+    padding: 12px;
+    position: relative;
+    width: 100%;
+}
+a {
+    background-color: transparent;
+    color: inherit;
+    text-decoration: none;
+}
+.p-line__button .u-icon__link {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+/* footer */
+.p-footer {
+    margin-top: 80px;
+    text-align: center;
+}
+.l-footer {
+    border-top: solid 1px #eee;
+}
+
+/* 右下のline */
+.p-fixedLine {
+    bottom: 16px;
+    position: fixed;
+    right: 16px;
+}
+.p-fixedLine__link {
+    align-items: center;
+    background-color: #5FDF5B;
+    border-radius: 16px;
+    box-shadow: 4px 4px 20px rgb(0 0 0 / 15%);
+    display: flex;
+    padding: 22px 20px 22px 24px;
+}
+
+a {
+    background-color: transparent;
+    color: inherit;
+    text-decoration: none;
+}
+.p-fixedLine__link .u-icon__line {
+    font-size: 36px;
+}
+
+/* LINEの小さな四角いらない
+.u-icon__line:before {
+    background: radial-gradient(#fff 60%, transparent 60%);
+    /* color: #00c300; */
+    /* content: "\e900";
+} */
+
+.p-fixedLine__link__text {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.14em;
+    line-height: 1.3;
+    margin-left: 13px;
+    text-align: left;
+}
+.p-fixedLine__link .u-icon__link {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 35px;
+}
+
+/* ＬＩＮＥのいらない四角  */
+ .u-icon__link:before {
+    content: "\e901";
+}
+
+.u-icon__link{
+    content: url(icon-link-light.svg); 
+}
+
+.u-icon__link__dark:before {
+    content: "\e901";
+}
+
+.u-icon__link__dark{
+    content: url(icon-link-dark.svg); 
+    float:right
+    /* 右寄せしたい */
+}
+
+.l-footer__inner {
+    padding: 56px 24px 48px;
+}
+
+/* logo */
+.p-footer__logo {
+    display: block;
+}
+
+/* 公式サイト */
+.p-footer__siteinfo__link {
+    color: #666;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 24px;
+}
+
+/* sns */
+.p-footer__sns__list {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 32px;
+}
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.p-sns__item__link {
+    align-items: center;
+    border: solid 1px #eee;
+    border-radius: 50%;
+    color: #adadad;
+    display: inline-flex;
+    font-size: 24px;
+    height: 50px;
+    justify-content: center;
+    width: 50px;
+}
+i, .icomoon-liga {
+    speak: never;
+    -ms-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "posse-icon" !important;
+    font-style: normal;
+    font-variant: normal;
+    font-variant-ligatures: discretionary-ligatures;
+    font-weight: normal;
+    letter-spacing: 0;
+    line-height: 1;
+    text-transform: none;
+}
+
+.p-sns__item__link {
+    align-items: center;
+    border: solid 1px #eee;
+    border-radius: 50%;
+    color: #adadad;
+    display: inline-flex;
+    font-size: 24px;
+    height: 50px;
+    justify-content: center;
+    width: 50px;
+}
+a {
+    background-color: transparent;
+    color: inherit;
+    text-decoration: none;
+}
+.p-footer__copyright {
+    border-top: solid 1px #eee;
+    color: #666;
+    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    padding: 38px 24px 33px;
+}
+small {
+    font-size: 80%;
+}
+
+
+/* クイズページ */
+
+/* head */
+*, ::before, ::after {
+    border-style: solid;
+    border-width: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+/* header class=".l-header .p-heade " */
+.p-header {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    padding: 15px 24px;
+}
+.l-header {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+}
+
+/* posseロゴ */
+svg, img, embed, object, iframe {
+    vertical-align: bottom;
+}
+
+
+
+/* Twitter、インスタロゴ */
+.p-sns {
+    display: flex;
+    gap: 16px;
+}
+.p-header__sns {
+    margin-left: 32px;
+}
+.p-sns__item__link {
+    align-items: center;
+    border: solid 1px #eee;
+    border-radius: 50%;
+    color: #adadad;
+    display: inline-flex;
+    font-size: 24px;
+    height: 50px;
+    justify-content: center;
+    width: 50px;
+}
+.p-header__nav__list{
+    display: flex;
+}
+
+i, .icomoon-liga {
+    speak: never;
+    -ms-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "posse-icon" !important;
+    font-style: normal;
+    font-variant: normal;
+    font-variant-ligatures: discretionary-ligatures;
+    font-weight: normal;
+    letter-spacing: 0;
+    line-height: 1;
+    text-transform: none;
+}
+/* .u-icon__twitter:before {
+    content: "\ea96";
+} */
+
+/* main */
+.l-main {
+    padding-top: 80px;
+}
+main {
+    display: block;
+}
+
+/* ITクイズ写真 */
+.p-quiz-hero {
+    background: url(./quiz/study.jpg) center center/cover;
+    padding-left: 204px;
+    padding-top: 104px;
+}
+.p-hero {
+    padding: 110px 0 76px;
+}
+.l-container {
+    margin: 0 auto;
+    max-width: 1032px;
+    padding: 0 24px;
+    width: 100%;
+}
+/* ITクイズ文字 */
+.p-hero__title {
+    color: #fff;
+    font-weight: bold;
+    padding-left: 204px;
+}
+
+/* POSSE課題文字 */
+.p-hero__title__label {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* 文字配置 */
+.p-hero__title__inline {
+    display: block;
+    font-size: 60px;
+    line-height: 1.5;
+    margin-top: 12px;
+}
+
+/* クイズ全体 */
+.p-quiz-container {
+    margin-top: 120px;
+}
+.l-container {
+    margin: 0 auto;
+    max-width: 1032px;
+    padding: 0 24px;
+    width: 100%;
+}
+
+.p-quiz-box__question__title__text {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 24px;
+}
+
+
+/* Q1 */
+.p-quiz-box__label {
+    background-color: #0071bc;
+    border-radius: 8px;
+    color: #fff;
+    display: inline-block;
+    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 8px 16px;
+}
+
+.p-quiz-box__question__image {
+    margin: 64px auto 0;
+    max-width: 718px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.p-quiz-box__answer {
+    margin-top: 64px;
+}
+
+/* Q1答え */
+.p-quiz-box__label--accent {
+    background-color: #e34e70;
+}
+
+/* 選択肢 */
+.p-quiz-box__answer__list {
+    -ms-grid-columns: (1fr)[3];
+    display: -ms-grid;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 16px;
+}
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.p-quiz-box__answer__button {
+    align-items: center;
+    border: solid 5px #eee;
+    border-radius: 8px;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.8;
+    padding: 19px;
+    text-align: left;
+    width: 100%;
+}
+button, [type=button], [type=reset], [type=submit] {
+    cursor: pointer;
+}
+button, input, optgroup, select, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border-radius: 0;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    text-transform: inherit;
+    vertical-align: middle;
+}
+.p-quiz-box__answer__button .u-icon__arrow {
+    font-size: 16px;
+    margin-left: auto;
+
+}.u-icon__arrow{
+    content: url(./js/icon-arrow.svg); 
+    float:right
+    /* 右寄せしたい */
+}
+
+
+.p-quiz-box__answer__correct__title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+}
+.p-quiz-box__answer__correct__content {
+    align-items: baseline;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    gap: 18px;
+    line-height: 1.8;
+    margin-top: 16px;
+}
+.p-quiz-box__answer__correct__content__label {
+    display: none;
+    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+    font-size: 24px;
+}
+
+
+/* .p-quiz-box__answer__correct.is-incorrect{
+    background-color: grey;
+    display: block;
+} */
+
+.p-quiz-box__answer__correct.is-incorrect{
+    display: block;
+}
+
+.p-quiz-box__answer__correct.is-incorrect{
+    background-color:#f0f8ff;
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 24px 40px;
+}
+
+.p-quiz-box__answer__correct.is-correct{
+    display: block;
+}
+
+.p-quiz-box__answer__correct.is-correct{
+    background-color: pink;
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 24px 40px;
+}
+
+/* 経済産業省 */
+.p-quiz-box__note {
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    display: block;
+    display: flex;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+    gap: 16px;
+    line-height: 1.8;
+    margin-top: 16px;
+    padding: 24px;
+}
+
+/* Q2
+.p-quiz-box:not(:first-of-type) {
+    margin-top: 120px;
+}
+.p-quiz-box__label {
+    background-color: #0071bc;
+    border-radius: 8px;
+    color: #fff;
+    display: inline-block;
+    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 8px 16px;
+}
+.p-quiz-box__question__title__text {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 24px;
+}
+.p-quiz-box__question__image {
+    margin: 64px auto 0;
+    max-width: 718px;
+}
+img {
+    max-width: 100%;
+}
+Q2答え
+.p-quiz-box__answer {
+    margin-top: 64px;
+}
+.p-quiz-box__label--accent {
+    background-color: #e34e70;
+}
+.p-quiz-box__label {
+    background-color: #0071bc;
+    border-radius: 8px;
+    color: #fff;
+    display: inline-block;
+    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 8px 16px;
+}
+*, ::before, ::after {
+    border-style: solid;
+    border-width: 0;
+    box-sizing: border-box;
+}
+.p-quiz-box__answer__list {
+    -ms-grid-columns: (1fr)[3];
+    display: -ms-grid;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 16px;
+}
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.p-quiz-box__answer__button {
+    align-items: center;
+    border: solid 5px #eee;
+    border-radius: 8px;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.8;
+    padding: 19px;
+    text-align: left;
+    width: 100%;
+}
+button, [type=button], [type=reset], [type=submit] {
+    cursor: pointer;
+}
+.p-quiz-box__answer__button .u-icon__arrow {
+    font-size: 16px;
+    margin-left: auto;
+}
+.p-quiz-box__answer__button .u-icon__arrow {
+    font-size: 16px;
+    margin-left: auto;
+}
+.p-quiz-box__answer__correct {
+    background-color: #fff2f5;
+    border-radius: 8px;
+    display: none;
+    margin-top: 16px;
+    padding: 24px 40px;
+}
+.p-quiz-box__answer__correct__title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+}
+.p-quiz-box__answer__correct__content {
+    align-items: baseline;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    gap: 18px;
+    line-height: 1.8;
+    margin-top: 16px;
+}
+.p-quiz-box__answer__correct__content__label {
+    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+    font-size: 24px;
+} */
+
+/* Q3 */
+.p-quiz-box:not(:first-of-type) {
+    margin-top: 120px;
+}
+
+/* POSSE公式LINE */
+.p-line {
+    margin-top: 144px;
+}
+.p-line__body::before {
+    background-color: rgba(0, 113, 188, 0.9);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.l-container {
+    margin: 0 auto;
+    max-width: 1032px;
+    padding: 0 24px;
+    width: 100%;
+}
+
+.p-line__body__inner {
+    position: relative;
+}
+p-heading.-light {
+    color: #fff;
+}
+.p-line__title {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+.p-heading {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    text-align: center;
+}
+.p-line__title .u-icon__line {
+    font-size: 40px;
+}
+.p-line__content {
+    color: #eee;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+    margin-top: 16px;
+    text-align: center;
+}
+.p-line__footer {
+    margin-top: 16px;
+    text-align: center;
+}
+.p-line__button {
+    background-color: #fff;
+    border-radius: 50px;
+    color: #333;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+    max-width: 320px;
+    padding: 12px;
+    position: relative;
+    width: 100%;
+}
+.p-line__button .u-icon__link {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+/* footer */
+.p-footer {
+    margin-top: 80px;
+    text-align: center;
+}
+.l-footer {
+    border-top: solid 1px #eee;
+}
+
+/* 右下のLINE */
+.p-fixedLine {
+    bottom: 16px;
+    position: fixed;
+    right: 16px;
+}
+.p-fixedLine__link {
+    align-items: center;
+    background-color: #5FDF5B;
+    border-radius: 16px;
+    box-shadow: 4px 4px 20px rgb(0 0 0 / 15%);
+    display: flex;
+    padding: 22px 20px 22px 24px;
+}
+.p-fixedLine__link .u-icon__line {
+    font-size: 36px;
+}
+.p-fixedLine__link__text {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.14em;
+    line-height: 1.3;
+    margin-left: 13px;
+    text-align: left;
+}
+.p-fixedLine__link .u-icon__link {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 35px;
+}
+.l-footer__inner {
+    padding: 56px 24px 48px;
+}
+.p-footer__logo {
+    display: block;
+}
+img {
+    max-width: 100%;
+}
+.p-footer__sns__list {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 32px;
+}
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.p-sns__item__link {
+    align-items: center;
+    border: solid 1px #eee;
+    border-radius: 50%;
+    color: #adadad;
+    display: inline-flex;
+    font-size: 24px;
+    height: 50px;
+    justify-content: center;
+    width: 50px;
+}
+a {
+    background-color: transparent;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 2022POSSE */
+.p-footer__copyright {
+    border-top: solid 1px #eee;
+    color: #666;
+    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    padding: 38px 24px 33px;
+}
+small {
+    font-size: 80%;
+}
+
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+}
+
+/* ITクイズとQ1の間 */
+.p-quiz-container {
+    margin-top: 120px;
+}

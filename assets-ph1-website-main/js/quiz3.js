@@ -1,5 +1,77 @@
 'use strict';
 
+/**
+ * @type {string}
+ * @description 生成したクイズのHTMLを #js-quizContainer に挿入
+ */
+quizContainer.innerHTML = ALL_QUIZ.map((quizItem, index) => {
+  return createQuizHtml(quizItem, index)
+}).join('')
+
+/**
+ * @type {NodeListOf<Element>}
+ * @description すべての問題を取得
+ */
+const allQuiz = document.querySelectorAll('.js-quiz');
+
+/**
+ * @description buttonタグにdisabledを付与
+ * @param answers {NodeListOf<Element>}
+ */
+const setDisabled = answers => {
+  answers.forEach(answer => {
+    answer.disabled = true;
+  })
+}
+
+/**
+ * @description trueかfalseで出力する文字列を出し分ける
+ * @param target {Element}
+ * @param isCorrect {boolean}
+ */
+const setTitle = (target, isCorrect) => {
+  target.innerText = isCorrect ? '正解！' : '不正解...';
+}
+
+/**
+ * @description trueかfalseでクラス名を付け分ける
+ * @param target {Element}
+ * @param isCorrect {boolean}
+ */
+const setClassName = (target, isCorrect) => {
+  target.classList.add(isCorrect ? 'is-correct' : 'is-incorrect');
+}
+
+/**
+ * 各問題の中での処理
+ */
+allQuiz.forEach(quiz => {
+  const answers = quiz.querySelectorAll('.js-answer');
+  const selectedQuiz = Number(quiz.getAttribute('data-quiz'));
+  const answerBox = quiz.querySelector('.js-answerBox');
+  const answerTitle = quiz.querySelector('.js-answerTitle');
+  const answerText = quiz.querySelector('.js-answerText');
+
+  answers.forEach(answer => {
+    answer.addEventListener('click', () => {
+      answer.classList.add('is-selected');
+      const selectedAnswerNumber = Number(answer.getAttribute('data-answer'));
+
+      // 全てのボタンを非活性化
+      setDisabled(answers);
+
+      // 正解ならtrue, 不正解ならfalseをcheckCorrectに格納
+      const correctNumber = ALL_QUIZ[selectedQuiz].correctNumber
+      const isCorrect = correctNumber === selectedAnswerNumber;
+
+      // 回答欄にテキストやclass名を付与
+      answerText.innerText = ALL_QUIZ[selectedQuiz].answers[correctNumber];
+      setTitle(answerTitle, isCorrect);
+      setClassName(answerBox, isCorrect);
+    })
+  })
+})
+
 {
   /**
    * @typedef QUIZ
@@ -74,43 +146,43 @@
      * @type {string}
      */
     const answersHtml = quizItem.answers.map((answer, answerIndex) => `<li class="p-quiz-box__answer__item">
-        <button class="p-quiz-box__answer__button js-answer" data-answer="${answerIndex}">
-          ${answer}<i class="u-icon__arrow"></i>
-        </button>
-      </li>`
+          <button class="p-quiz-box__answer__button js-answer" data-answer="${answerIndex}">
+            ${answer}<i class="u-icon__arrow"></i>
+          </button>
+        </li>`
     ).join('');
 
     // 引用テキストの生成
     const noteHtml = quizItem.note ? `<cite class="p-quiz-box__note">
-      <i class="u-icon__note"></i>${quizItem.note}
-    </cite>` : '';
+        <i class="u-icon__note"></i>${quizItem.note}
+      </cite>` : '';
 
     return `<section class="p-quiz-box js-quiz" data-quiz="${questionNumber}">
-      <div class="p-quiz-box__question">
-        <h2 class="p-quiz-box__question__title">
-          <span class="p-quiz-box__label">Q${questionNumber + 1}</span>
-          <span
-            class="p-quiz-box__question__title__text">${quizItem.question}</span>
-        </h2>
-        <figure class="p-quiz-box__question__image">
-          <img src="../assets/img/quiz/img-quiz0${quizItem.id}.png" alt="">
-        </figure>
-      </div>
-      <div class="p-quiz-box__answer">
-        <span class="p-quiz-box__label p-quiz-box__label--accent">A</span>
-        <ul class="p-quiz-box__answer__list">
-          ${answersHtml}
-        </ul>
-        <div class="p-quiz-box__answer__correct js-answerBox">
-          <p class="p-quiz-box__answer__correct__title js-answerTitle"></p>
-          <p class="p-quiz-box__answer__correct__content">
-            <span class="p-quiz-box__answer__correct__content__label">A</span>
-            <span class="js-answerText"></span>
-          </p>
+        <div class="p-quiz-box__question">
+          <h2 class="p-quiz-box__question__title">
+            <span class="p-quiz-box__label">Q${questionNumber + 1}</span>
+            <span
+              class="p-quiz-box__question__title__text">${quizItem.question}</span>
+          </h2>
+          <figure class="p-quiz-box__question__image">
+            <img src="../assets/img/quiz/img-quiz0${quizItem.id}.png" alt="">
+          </figure>
         </div>
-      </div>
-      ${noteHtml}
-    </section>`
+        <div class="p-quiz-box__answer">
+          <span class="p-quiz-box__label p-quiz-box__label--accent">A</span>
+          <ul class="p-quiz-box__answer__list">
+            ${answersHtml}
+          </ul>
+          <div class="p-quiz-box__answer__correct js-answerBox">
+            <p class="p-quiz-box__answer__correct__title js-answerTitle"></p>
+            <p class="p-quiz-box__answer__correct__content">
+              <span class="p-quiz-box__answer__correct__content__label">A</span>
+              <span class="js-answerText"></span>
+            </p>
+          </div>
+        </div>
+        ${noteHtml}
+      </section>`
   }
 
   /**
@@ -146,7 +218,7 @@
    * @type {NodeListOf<Element>}
    * @description すべての問題を取得
    */
-  const allQuiz  = document.querySelectorAll('.js-quiz');
+  const allQuiz = document.querySelectorAll('.js-quiz');
 
   /**
    * @description buttonタグにdisabledを付与
@@ -179,17 +251,21 @@
   /**
    * 各問題の中での処理
    */
-  allQuiz.forEach(quiz => {
+  allQuiz.forEach(quiz) => {
     const answers = quiz.querySelectorAll('.js-answer');
     const selectedQuiz = Number(quiz.getAttribute('data-quiz'));
     const answerBox = quiz.querySelector('.js-answerBox');
     const answerTitle = quiz.querySelector('.js-answerTitle');
     const answerText = quiz.querySelector('.js-answerText');
 
+    // Number(quiz.getAttribute('data-quiz'));文字形式じゃなくて数字
+
     answers.forEach(answer => {
       answer.addEventListener('click', () => {
         answer.classList.add('is-selected');
         const selectedAnswerNumber = Number(answer.getAttribute('data-answer'));
+      
+        // 実際の答えがでてくる
 
         // 全てのボタンを非活性化
         setDisabled(answers);
@@ -202,7 +278,24 @@
         answerText.innerText = quizArray[selectedQuiz].answers[correctNumber];
         setTitle(answerTitle, isCorrect);
         setClassName(answerBox, isCorrect);
-      })
-    })
-  })
+
+        // シャッフル
+        // k = Math.floor(Math.random() * 3); 
+        // Math random 0以上3未満の適当な数
+        // ＊ｎ倍かける　ｎ回
+        // Math　floor 与えられた数値以下の整数
+        // 関数を使うとコードがきれいになる
+
+        // 問題ごとシャッフルする  arraysは引用 const shuffle = function(arrays)(...)と一緒
+        const shuffle = array => {
+          // sliceは配列をコピーするイメージ（シャッフル前のもとの形はとっておきたい）、参照渡しじゃなくて値渡し
+          const array = arrays.slice();
+          for (let i = array.length - 1; i >= 0; i--) {
+            ランダム
+          }
+          array.answer
+            .length - 1; i >= 0; i--)
+    }
+        )
 }
+

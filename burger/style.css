@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+body{
+    background-color: #ccc;
+}
+
+/* ヘッダー */
+header{
+    height: 80px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.header_logo img{
+    height: 50px;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 auto;
+    /* 右端にしたい */
+}
+
+.list_nav_header{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-right: 50px;
+}
+
+a{
+    color:#000;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* バーガー */
+/* .burger{
+    width: 40px;
+    height: 40px;
+    background-image: url(./img/boders.png);
+    background-size: 24px;
+    background-position:center ;
+    background-repeat: no-repeat ;
+    margin-left:80px;
+    border-radius: 4px;
+    cursor: pointer ;
+    /* 矢印から指マーク */
+    /* position: relative;
+    z-index: 2;
+}
+.burger:hover{
+    background-color: #ddd;
+}
+.burger.is-active{
+    background-image: url(./img/not.png);
+} */ */
+
+/* メニュー */
+/* .menu{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw ; 
+    vw画面の横幅いっぱい
+    height: 100vh;
+    vhは画面の高さいっぱい
+    background-color: #000; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+} */ */
+
+/* .menue{
+    /* メニューの位置マイナス指定で画面外に */
+    /* position: fixed;
+    right: -70%;
+    width: 70%;
+    height: 100vh;
+    margin-left: auto; */
+    /* メニューを横に */
+    /* display: flex;
+    flex-direction:column ; */
+    /* 表示範囲内のリストが縦並びに配置される */
+    /* color: #efefef;
+    background-color: rgba(167, 148, 58, 0.7);
+    transition: .3s;
+} */
+
+/* .menue-list{
+    width: 100%;
+    height: 100%; */
+    /* メニューテキスト位置をリスト内中心に */
+    /* display: flex;
+    justify-content: center; */
+    /* justify-contentプロパティは、フレックスアイテムの主軸方向の揃え位置を指定 */
+    /* フレックスコンテナの主軸の幅の中央に揃えます。通常、左右中央に配置 */
+    /* align-items: center;
+} */ 
+
+.menu.is-active{
+    display: flex;
+}
+
+
+/* メイン */
+main{
+    min-height: 600px;
+}
+
+/*　ハンバーガーボタン　*/
+.hamburger {
+    display : block;
+    position: fixed;
+    z-index : 3;
+    right : 13px;
+    top   : 12px;
+    width : 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .hamburger span {
+    display : block;
+    position: absolute;
+    width   : 30px;
+    height  : 2px ;
+    left    : 6px;
+    background : #555;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition   : 0.3s ease-in-out;
+    transition        : 0.3s ease-in-out;
+  }
+  .hamburger span:nth-child(1) {
+    top: 10px;
+  }
+  .hamburger span:nth-child(2) {
+    top: 20px;
+  }
+  .hamburger span:nth-child(3) {
+    top: 30px;
+  }
+  
+  /* ナビ開いてる時のボタン */
+  .hamburger.active span:nth-child(1) {
+    top : 16px;
+    left: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform   : rotate(-45deg);
+    transform        : rotate(-45deg);
+  }
+  
+  .hamburger.active span:nth-child(2),
+  .hamburger.active span:nth-child(3) {
+    top: 16px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform   : rotate(45deg);
+    transform        : rotate(45deg);
+  }
+  
+  nav.globalMenuSp {
+    position: fixed;
+    z-index : 2;
+    top  : 0;
+    left : 0;
+    color: #000;
+    background: #fff;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: all 0.6s;
+    width: 100%;
+  }
+  
+  nav.globalMenuSp ul {
+    background: #ccc;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+  
+  nav.globalMenuSp ul li {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+  }
+  nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  nav.globalMenuSp ul li:hover{
+    background :#ddd;
+  }
+  
+  nav.globalMenuSp ul li a {
+    display: block;
+    color: #000;
+    padding: 1em 0;
+    text-decoration :none;
+  }
+  
+  /* このクラスを、jQueryで付与・削除する */
+  nav.globalMenuSp.active {
+    transform: translateY(0%);
+  }

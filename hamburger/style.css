@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    display: flex;
+    /* サイドバーをつくる */
+    font-size: 2rem;
+    min-height: 100vh;
+    /* 高さをMaxにする */
+    /* vhは高さを100段階にわけたもの */
+}
+main{
+    /* flex: 1; */
+    /* 横幅を最大まで広げたい */
+    /* mainを全体幅から固定幅に変更する */
+    width: 700px;
+    margin: 0 auto;
+}
+
+aside{
+    width: 25%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    /* colum 主軸は水直。要素の配置方向が上から下（↓）に配置されます。 */
+}
+/* サイドバーはサイドとメインを分けてメインを際立たせたいときやたくさんページ数があってリンク数が多いとき以外は使わない方が良い */
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* サイドバーにフッターを作る */
+div{
+    height: 300px;
+    margin-top: auto;
+}
+
+/* 🍔 */
+.open,
+.close{
+    display: none;
+}
+/* ハンバーガーと× */
+
+input[type="checkbox"]{
+    position: absolute;
+    left: -50vx;
+}
+/* display:noneにするとidとforが反映されなくなるのでなくすのではなく、隠す */
+/* チェックボックスを隠したい */
+/* position:absoluteで絶対値指定  */
+/* bottom:0 :right:0にすると右下に固定 */
+
+/* 🍔 */
+
+@media screen and (max-width:1000px) {
+    /* 1000pxを使ったらこのcssを使ってくださいねという合図 */
+    main{
+        width: 100%;
+        padding-top: 50px;
+    }
+    /* paddingはハンバーガーにかぶらないようにしている */
+}
+
+/* 🍔 */
+.open,
+.close{
+    display:block ;
+}
+/* パソコン版だと必要なかったが、スマホ版だと必要  noneをなくす*/
+.open{
+    position: absolute;
+}
+/* 🍔をmainの上に表示させたい absoluteで座標で位置を決める*/
+
+aside{
+    position: absolute;
+    left: -250px;
+    height: 100%;
+    transition: all 0.2s;
+    background: #ffffff;
+}
+/* パソコン版だとサイドバーは常にでている状態だが、スマホ版は最初は消えている方が良い　－250pxで隠す */
+/* transition allはすべてのプロパティの変更に対してアニメーションを設定する、今回はサイドバーが消えたり出たりする。
+0.2ｓはアニメーションのはじめから終わりまでの秒数 0.4秒だと遅い。0.3秒以内が良い*/
+/* backgroundの色をつけないと背景色が透明となってしまう */
+
+
+input[type="checklbox"]:checked ~ aside{
+    left: 0;
+}
+/* :checkedは疑似クラス　チェックが入っているとき　～は間接セレクタ。左と同じ親（今回だとbody）を持ち、後の要素（HTMLのあと）に対して使われる。 */
+
+
+input[type="checkbox"]:checked ~ .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8) !important;
+}
+/* .backは中身を書いてない。0.8は20％透明にした。 */

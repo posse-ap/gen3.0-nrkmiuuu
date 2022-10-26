@@ -1,4 +1,5 @@
 'use strict';
+
 console.clear();
 {
     const today = new Date();
@@ -26,7 +27,7 @@ console.clear();
         return dates;
     }
 
-    function clearCalendar(){
+    function clearCalendar() {
         //createCalender() するたびに tbody の中身をクリア
         const tbody = document.querySelector('tbody');
         //tbody の最初の子要素がある限り、 tbody からその最初の子要素を削除
@@ -37,7 +38,7 @@ console.clear();
     function renderTitle() {
         //月が 1 桁のときは最初に 0 を足す
         // padStart() は文字列にしか使えないので String() でいったん文字列にしてあげて、 padStart() を使う
-        const title = '${year}/${String(month + 1).padStart(2, 0)}';   // 2桁で表示してね、それに満たなかったら 0 の文字列で埋めてね
+        const title = `${year}/${String(month + 1).padStart(2, 0)}`;   // 2桁で表示してね、それに満たなかったら 0 の文字列で埋めてね
         document.getElementById('title').textContent = title;
     }
     function renderWeeks(){
@@ -141,6 +142,7 @@ console.clear();
                 isDisabled: true,
             });
         }
+        return dates;
     }
     getCalenderHead();
 }

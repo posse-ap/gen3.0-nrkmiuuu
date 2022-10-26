@@ -46,25 +46,19 @@
 //         options: options
 //     });
 // })();
-var ctx = document.getElementById('ex_chart');
-var data = {
-    labels: ["令和元年", "令和2年", "令和3年", "令和4年", "令和5年"],
-    datasets: [{
-        label: '得点',
-        data: [880, 740, 900, 520, 930],
-        backgroundColor: 'rgba(255, 100, 100, 1)'
-    }]
-};
-var options = {
-    scales: {
-        y:{
-            min: 300
-            //beginAtZero: true
-        }
-    }
-};
-var ex_chart = new Chart(ctx, {
-    type: 'bar',
-    data: data,
-    options: options
-});
+
+window.onload = function () {
+    let context = document.querySelector("#sushi_circle").getContext('2d')
+    new Chart(context, {
+      type: 'doughnut',
+      data: {
+        labels: ["サーモン", "ハマチ", "マグロ", "サバ", "エンガワ"],
+        datasets: [{
+          data: [60, 20, 15, 10, 5]
+        }]
+      },
+      options: {
+        responsive: false,
+      }
+    });
+  }

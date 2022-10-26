@@ -1,0 +1,43 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+table{
+    /* カレンダー内の余白をなくす */
+    border-collapse: collapse;
+    border: 2px solid #eee;
+}
+thead,
+tfoot {
+    background: #eee;
+}
+th,
+td {
+    padding: 8px;
+    text-align: center;
+}
+tbody td:first-child {
+    color: red;
+}
+tbody td:last-child {
+    color: blue;
+}
+/* todayの文字の太さを変更 */
+tfoot{
+    font-weight: bold;
+}
+/* 前月と翌月部分の日付の文字を薄くする */
+td.disabled{
+    opacity: 0.3;
+}
+/* tdにtodayクラスがついたら太字にする */
+td.today{
+    font-weight: bold;
+}
+#prev,
+#next,
+#today{
+    /* カーソルをあてると指マーク */
+    cursor: pointer;
+    user-select: none;
+}

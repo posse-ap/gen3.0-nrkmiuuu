@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP画面</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div class="header-menu">
+            <div class="menu">
+                <img src="./img/logo.svg" alt="POSSEロゴ" class="header-logo">
+                <p class="header-menu-week">4week</p>
+            </div>
+            <div class="header-log" id="open">
+                記録・投稿
+            </div>
+        </div>
+
+
+        <!-- モーダルウィンドウ -->
+        <!-- クリックしたらモーダルを表示するボタン -->
+        <!-- オーバーレイ（黒い背景） -->
+        <div class="overlay"></div>
+        <!-- モーダルウィンドウ -->
+        <div class="modal">
+            <div class="close">×</div>
+            <!-- テキストボックス -->
+            <div class="modal_left">
+                <form action="" method="post">
+                    <p>学習日<br>
+                    <div class="studyday">
+                        <input type="date" name="date" class="modal_date">
+                        <a href="./calendar/calendar.html"></a>
+                    </div>
+                    </p>
+                    <p>学習コンテンツ（複数選択可）<br>
+                    <div class="studycontent">
+                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">N予備校</label>
+                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">ドットインストール</label>
+                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">POSSE課題</label>
+                    </div>
+                    </p>
+
+                    <p>学習言語（複数選択可) <br>
+                    <div class="language">
+                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">HTML</label>
+                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">CSS</label>
+                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">JavaScript</label>
+                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">PHP</label>
+                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">Laravel</label>
+                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">SQL</label>
+                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">SHELL</label>
+                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">情報システム（その他）</label>
+                    </div>
+                    </p>
+            </div>
+            <div class="modal_right">
+                <div class="modal_right_1">
+                    <p>学習時間<br>
+                        <input type="text" name="date" class="modal_time">
+                        <a href="./calendar/calendar.html"></a>
+                    </p>
+                </div>
+                <div class="modal_right_2">
+                    <p>Twitter用コメント<br>
+                        <input type="text" name="date" class="modal_comment">
+                    </p>
+                </div>
+                <div class="twittershare">
+                    <input id="sample1" value="1" type="checkbox" checked><label for="sample1">twitterにシェアする</label>
+                </div>
+            </div>
+            <!-- モーダルウィンドウ内の記録・投稿完了 -->
+            <a href="#" class="btn">記録・投稿</a>
+            <!-- オーバーレイ（黒い背景） -->
+            <div class="overlay"></div>
+            <!-- モーダルウィンドウ -->
+            <div class="modal">
+                <div class="close">×</div>
+                <!-- テキストボックス -->
+                <div class="complete">
+                    <img src="" alt="comolete">
+                    <br>
+                    記録・投稿 <br> 完了しました
+                </div>
+                </form>
+    </header>
+    <main class="container">
+        <div class="box-wrapper1">
+            <ul class="hour">
+                <li class="box-hour"> <span class="font_box1_1">Today</span> <br> <strong>0</strong> <br> <span
+                        class="font_box1_2">hour</span>
+                </li>
+                <li class="box-hour"> <span class="font_box1_1">Month</span> <br> <strong>17</strong> <br> <span
+                        class="font_box1_2">hour</span>
+                </li>
+                <li class="box-hour"> <span class="font_box1_1">Total</span> <br> <strong>19</strong> <br> <span
+                        class="font_box1_2">hour</span>
+                </li>
+            </ul>
+            <div class="box2">
+                <h2> 棒グラフ</h2>
+                <canvas id="ex_chart"></canvas>
+            </div>
+        </div>
+        <div class="box-wrapper2">
+            <div class="box3">学習言語</div>
+            <div class="box3">学習コンテンツ</div>
+        </div>
+    </main>
+    <div class="month">＜2020年10月＞</div>
+    <script src="./webapp.js"></script>
+    <script src="./line.js"></script>
+    <script src="./line2.js"></script>
+    <script src="./calendar.js"></script>
+    
+</body>
+</html>

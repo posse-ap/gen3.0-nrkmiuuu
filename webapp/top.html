@@ -8,6 +8,9 @@
     <title>TOP画面</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./chart/line.js" defer></script>
+    <!-- 棒グラフ -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1"></script>
+    <!-- 円グラフ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 </head>
 
@@ -92,12 +95,6 @@
             <!-- モーダルウィンドウ -->
             <div class="modal2">
                 <div class="close2">×</div>
-
-
-
-
-
-
                 </form>
     </header>
     <main class="container">
@@ -114,8 +111,7 @@
                 </li>
             </ul>
             <div class="box2">
-                <h2> 棒グラフ</h2>
-                <div class="line-chart" id="line-chart"></div>
+                <canvas id="line_chart" width="200" height="200"></canvas>
             </div>
         </div>
         <div class="box-wrapper2">

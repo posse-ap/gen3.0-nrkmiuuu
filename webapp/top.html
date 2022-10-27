@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOP画面</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./chart/line.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 </head>
 
 <body>
@@ -79,31 +81,18 @@
 
             <!-- モーダルウィンドウ内の記録・投稿完了 -->
 
-            <div class="header-log" id="open">
+            <div class="header-next" id="open2">
                 記録・投稿
             </div>
 
             <!-- モーダルウィンドウ -->
             <!-- クリックしたらモーダルを表示するボタン -->
             <!-- オーバーレイ（黒い背景） -->
-            <div class="overlay"></div>
+            <div class="overlay2"></div>
             <!-- モーダルウィンドウ -->
-            <div class="modal">
-                <div class="close">×</div>
+            <div class="modal2">
+                <div class="close2">×</div>
 
-
-                <!-- <a href="#" class="btn">記録・投稿</a> -->
-                <!-- オーバーレイ（黒い背景） -->
-                <!-- <div class="overlay"></div> -->
-                <!-- モーダルウィンドウ -->
-                <!-- <div class="modal">
-                <div class="close">×</div> -->
-                <!-- テキストボックス -->
-                <!-- <div class="complete">
-                    <img src="" alt="comolete">
-                    <br>
-                    記録・投稿 <br> 完了しました
-                </div> -->
 
 
 
@@ -126,22 +115,27 @@
             </ul>
             <div class="box2">
                 <h2> 棒グラフ</h2>
-                <canvas id="ex_chart"></canvas>
+                <div class="line-chart" id="line-chart"></div>
             </div>
         </div>
         <div class="box-wrapper2">
             <div class="box3">
-                <h2>学習言語</h2> 
-                <canvas id="sushi_circle" width="400" height="400"></canvas>
+                <h2>学習言語</h2>
+                <canvas id="language_doughnut"></canvas>
             </div>
-            <div class="box3">学習コンテンツ</div>
+            <div class="box3">
+                <h2>学習コンテンツ</h2>
+                <canvas id="content_doughnut"></canvas>
+            </div>
         </div>
         <div class="month">＜2020年10月＞</div>
     </main>
-    
-    <script src="./webapp.js"></script>
+
     <script src="./chart/line.js"></script>
+    <script src="./webapp.js"></script>
     <script src="./calendar.js"></script>
+    <script src="./chart/dounat.js"></script>
+    <script src="./chart/dounat2.js"></script>
 
 </body>
 

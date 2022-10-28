@@ -19,9 +19,12 @@
           ]
         }]
       },
-      // options: {
-      //   responsive: false,
-      // }
+      options: {
+        legend: {
+          position: 'bottom'
+        },
+        responsive: false,
+      }
     })
   // }
 

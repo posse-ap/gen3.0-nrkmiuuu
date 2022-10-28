@@ -68,3 +68,8 @@ closeBtn2.addEventListener('click', function(){
 });
 
 //タイムセットアウト
+var alertmsg = function(){
+  alert("3秒経過");
+}
+setTimeout(alertmsg, 3000);
+

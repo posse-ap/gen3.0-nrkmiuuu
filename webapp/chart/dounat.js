@@ -23,10 +23,13 @@
         ],
         data: [60, 20, 15, 10, 5]
       }]
+    },
+    options: {
+      legend: {
+        position: 'bottom'
+      },
+      responsive: false,
     }
-    // options: {
-    //   responsive: false,
-    // }
   })
 // }
 

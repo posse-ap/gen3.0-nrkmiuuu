@@ -45,7 +45,7 @@ btn2.addEventListener('click', function(e){
   });
 
 // モダルの閉じるボタンをクリックしたら、モダルとオーバーレイのactiveクラスを外す
-closeBtn.addEventListener('click', function(){
+closeBtn2.addEventListener('click', function(){
     modal2.classList.remove('active');
     overlay2.classList.remove('active');
   });
@@ -68,6 +68,3 @@ closeBtn.addEventListener('click', function(){
 });
 
 //タイムセットアウト
-setTimeout [function() {
-  console.log("test2");
-}, 3000)

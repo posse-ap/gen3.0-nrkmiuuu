@@ -9,7 +9,7 @@ console.clear();
     let month = today.getMonth(); //5月
 
     //前月の日付を取得
-    function getCalenderHead() {
+    function getCalendarHead() {
         const dates = [];
         const d = new Date(year, month, 0).getDate()
         //今月の 1 日のオブジェクトが、週の何日目かを取得
@@ -32,7 +32,7 @@ console.clear();
     }
 
     // カレンダーの日付の本体
-    function getCalenderBody() {
+    function getCalendarBody() {
         const dates = []; //date日付、 day曜日
         const lastDate = new Date(year, month + 1, 0).getDate();
 
@@ -54,7 +54,7 @@ console.clear();
         return dates;
     }
 
-    function getCalenderTail() {
+    function getCalendarTail() {
         const dates = [];
         const lastDay = new Date(year, month + 1, 0).getDay();
 
@@ -71,7 +71,7 @@ console.clear();
 
 
     function clearCalendar() {
-        //createCalender() するたびに tbody の中身をクリア
+        //createCalendar() するたびに tbody の中身をクリア
         const tbody = document.querySelector('tbody');
         //tbody の最初の子要素がある限り、 tbody からその最初の子要素を削除
         while (tbody.firstChild) {
@@ -90,9 +90,9 @@ console.clear();
         const dates = [
             //それぞれの関数をよびだす
             //全ての要素を１つの配列の中で展開するのでスプレッド構文を使う
-            ...getCalenderHead(),
-            ...getCalenderBody(),
-            ...getCalenderTail(),
+            ...getCalendarHead(),
+            ...getCalendarBody(),
+            ...getCalendarTail(),
         ];
         //7日文ごとの配列に分ける
         //週ごとの配列をいれる空の配列をつくる
@@ -149,7 +149,7 @@ console.clear();
         })
     }
 
-    function createCalender() {
+    function createCalendar() {
         //clearCalendar,renderTitle,renderWeeksをよびだす
         clearCalendar();
         renderTitle();
@@ -164,13 +164,13 @@ console.clear();
             month = 11;
         }
 
-        createCalender()
+        createCalendar()
     })
 
     // document.getElementById('today').addEventListener('click', () => {
     //     year = today.getFullYear();
     //     month = today.getMonth();
-    //     createCalender()
+    //     createCalendar()
     // });
 
     document.getElementById('next').addEventListener('click', () => {
@@ -180,9 +180,9 @@ console.clear();
             month = 0;
         }
 
-        createCalender();
+        createCalendar();
     });
 
-    createCalender();
+    createCalendar();
 
 }

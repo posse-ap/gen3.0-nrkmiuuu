@@ -39,7 +39,7 @@ console.clear();
         for (let i = 1; i <= lastDate; i++) {
             // オブジェクトのプロパティにする
             dates.push({
-                dates: i,
+                date: i,
                 isToday: false,
                 isDisabled: false,
             });

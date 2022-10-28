@@ -13,6 +13,9 @@ body {
    .header-logo {
      align-items: center;
    }
+
+
+   /* ---ボタン--- */
    #open,
    #open2 {
      /* margin-right: 10px; */
@@ -28,8 +31,13 @@ body {
      align-items: center;
      cursor: pointer;
      border: 1px solid #ccc;
-     /* display: flex; */
    }
+
+   #open .vanish {
+    display: none;
+   }
+
+   /* ----ヘッダー--- */
    .header-menu {
      justify-content: space-between;
      display: flex;
@@ -39,16 +47,8 @@ body {
    }
    
    /* モーダルウィンドウ */
-   /* ボタンのデザイン */
-   .btn {
-     text-decoration: none;
-     padding: 10px 20px;
-     background: linear-gradient(to right bottom, #1760a0, #4699ca);
-     border-radius: 20px;
-     color: #fff;
-     margin: 20px;
-     margin-left: auto;
-   }
+
+
    /* オーバーレイ */
    .overlay,
    .overlay2 {
@@ -130,7 +130,8 @@ body {
    section {
      height: 200vh;
    }
-   /* オーバーレイ */
+
+   /* ---オーバーレイ--- */
    .overlay,
    .overlay2 {
      /* デフォルトでは見えないようにする */
@@ -149,7 +150,8 @@ body {
      /* rgbaを使って60%の黒いオーバーレイにする */
      background: rgba(0, 0, 0, 0.6);
    }
-   /* オーバーレイ */
+
+   /* ---オーバーレイ--- */
    .overlay,
    .overlay2 {
      /* 位置を固定 */
@@ -307,11 +309,11 @@ body {
     font-weight: 500;
     font-size: 20px;
    }
+
+   .box-hour p {
+    gap: 5px;
+   }
    
-
-
-
-
 
    .box-hour {
      background-color: #fff;
@@ -343,7 +345,7 @@ body {
    }
    
    /* ----ローディング---- */
-   .loader{
+   /* .loader{
     margin: 0 0 2em;
     height: 200px;
     width: 40%;
@@ -357,11 +359,65 @@ body {
   /*
     Set the color of the icon
   */
-  svg path,
+  /* svg path,
   svg rect{
     fill: #1760a0;
+  } */ 
+
+
+  /* ふみやローディング */
+  /* .loading-wrapper {
+    display: none;
+  }
+
+  .loading-wrapper.openLoading {
+    display: block;
+    z-index: 100;
+    width: 70%;
+    height: 1150px;
+    background-color: #f0f8ff;
+    position: absolute;
+    margin-left: 15%;
+    margin-top: 100px;
+    inset: 0;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+  }
+
+  .loading-wrapper.vanish{
+    display: none;
+  } */
+
+
+  /* ふみや投稿完了 */
+  /* .done {
+    display: none;
   }
    
+  .none .openDone{
+    display: block;
+    z-index: 100;
+    width: 70%;
+    height: 1150px;
+    background-color: #f0f8ff;
+    position: absolute;
+    margin-left: 15%;
+    margin-top: 100px;
+    inset: 0;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+  }
+
+  .done.vanish {
+    display: none;
+  } */
+
+
+
    .month {
      padding-bottom: 30%;
      padding-left: 70%;
@@ -371,4 +427,30 @@ body {
 
    /* ----棒グラフ---- */
    #ex_chart {max-width:640px;max-height:480px;}
-   
+
+   /* 学習言語の位置 */
+   .box3 h2 {
+    padding-left: 15px;
+    padding-top: 15px;
+   }
+
+   /* 2020年10月 */
+   .month-left {
+    color: #325aa8;
+   }
+
+   .month-center {
+    width: 15px;
+   }
+
+   month-right {
+    color: gray;
+   }
+
+
+   /* ---記録・完了しました--- */
+   .afterlording-complete {
+    text-align: center;
+    padding-top: 20%;
+   }
+

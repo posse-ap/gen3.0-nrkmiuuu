@@ -1,5 +1,8 @@
 'use strict'
 
+//twitterにとぶ
+window.open('https://twitter.com/intent/tweet?text=any_text')
+
 //--------------モーダルウィンドウ-----------------------
 // ボタン、モダル、モダルの閉じるボタン、オーバーレイを変数に格納
 const btn = document.querySelector('.header-log');
@@ -28,9 +31,6 @@ closeBtn.addEventListener('click', function(){
     modal.classList.remove('active');
     overlay.classList.remove('active');
   });
-
-
-
 
 
 //----------------- モーダルウィンドウ内の記録・投稿完了----------------------
@@ -98,10 +98,6 @@ closeBtn2.addEventListener('click', function(){
   //   modal4.classList.remove('active');
   //   overlay4.classList.remove('active');
   // });
-
-
-
-
 
 
 

@@ -66,3 +66,8 @@ closeBtn.addEventListener('click', function(){
   $('#loading').delay(3000).queue(function() {
     $(this).addClass('loaded').dequeue();
 });
+
+//タイムセットアウト
+setTimeout [function() {
+  console.log("test2");
+}, 3000)

@@ -129,20 +129,21 @@ console.clear();
                 // td 要素ができたので、 tr 要素の子要素の末尾に追加
                 tr.appendChild(td);
 
+
                 //追加
-                td.addEventListener('click', () => {
+                // td.addEventListener('click', () => {
             
-                    const yearMonth = document.getElementById('title');
-                    const selectedDate = yearMonth.innerHTML+td.innerHTML+'日';
-                    console.log(selectedDate)
-                    const inputDate = document.getElementById('date');
-                    inputDate.value = selectedDate;
-                    const modalCalendar = document.querySelector('.modal_calendar');
-                    const modalMain = document.querySelector('.modal_main');
-                    modalCalendar.style.display = 'none';
-                    modalMain.style.display = 'block';
+                //     const yearMonth = document.getElementById('title');
+                //     const selectedDate = yearMonth.innerHTML+td.innerHTML+'日';
+                //     console.log(selectedDate)
+                //     const inputDate = document.getElementById('date');
+                //     inputDate.value = selectedDate;
+                //     const modalCalendar = document.querySelector('.modal_calendar');
+                //     const modalMain = document.querySelector('.modal_main');
+                //     modalCalendar.style.display = 'none';
+                //     modalMain.style.display = 'block';
         
-                })
+                // })
             });
             document.querySelector('tbody').appendChild(tr);
         })
@@ -179,7 +180,7 @@ console.clear();
             month = 0;
         }
 
-        createCalendar();
+        createCalender();
     });
 
     createCalender();

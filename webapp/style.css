@@ -290,12 +290,29 @@ body {
      /* 文字を中央揃え */
      text-align: center;
    }
-   .font_box1_1 {
-     color: #1760a0;
+
+   .box-hour-1 {
+    color: #1760a0;
+    font-weight: 500;
+    font-size: 20px;
    }
-   .font_box1_2 {
-     color: #aaaaaa;
+
+   .box-hour-2 {
+    font-weight: 500;
+    font-size: 30px;
    }
+
+   .box-hour-3 {
+    color: #ccc;
+    font-weight: 500;
+    font-size: 20px;
+   }
+   
+
+
+
+
+
    .box-hour {
      background-color: #fff;
      list-style: none;
@@ -328,8 +345,8 @@ body {
    /* ----ローディング---- */
    .loader{
     margin: 0 0 2em;
-    height: 100px;
-    width: 20%;
+    height: 200px;
+    width: 40%;
     text-align: center;
     padding: 1em;
     margin: 0 auto 1em;

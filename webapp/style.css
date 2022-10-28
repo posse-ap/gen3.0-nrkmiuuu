@@ -325,7 +325,7 @@ body {
      text-align: center;
    }
    
-   /* ローディング */
+   /* ----ローディング---- */
    .loader{
     margin: 0 0 2em;
     height: 100px;
@@ -349,6 +349,9 @@ body {
      padding-bottom: 30%;
      padding-left: 70%;
    }
+
+
+
    /* ----棒グラフ---- */
    #ex_chart {max-width:640px;max-height:480px;}
    

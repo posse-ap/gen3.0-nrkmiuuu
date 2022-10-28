@@ -1,7 +1,7 @@
 'use strict'
 
 //twitterにとぶ
-window.open('https://twitter.com/intent/tweet?text=any_text')
+// window.open('https://twitter.com/intent/tweet?text=any_text')
 
 //--------------モーダルウィンドウ-----------------------
 // ボタン、モダル、モダルの閉じるボタン、オーバーレイを変数に格納

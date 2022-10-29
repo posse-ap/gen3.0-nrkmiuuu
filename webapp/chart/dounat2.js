@@ -53,7 +53,7 @@ new Chart(contextContents, {
       backgroundColor: [
         "#4257f5",
         "#2d5591",
-        "03d7fc"
+        "03d7fc",
       ]
     }]
   },

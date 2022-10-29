@@ -130,24 +130,35 @@ console.clear();
                 tr.appendChild(td);
 
 
-                //追加
-                // td.addEventListener('click', () => {
-            
-                //     const yearMonth = document.getElementById('title');
-                //     const selectedDate = yearMonth.innerHTML+td.innerHTML+'日';
-                //     console.log(selectedDate)
-                //     const inputDate = document.getElementById('date');
-                //     inputDate.value = selectedDate;
-                //     const modalCalendar = document.querySelector('.modal_calendar');
-                //     const modalMain = document.querySelector('.modal_main');
-                //     modalCalendar.style.display = 'none';
-                //     modalMain.style.display = 'block';
-        
-                // })
+                //学習日入力
+                td.addEventListener('click',()=>{
+
+                    const yearMonth = document.getElementById('title');
+          
+                    const clickedDate = yearMonth.innerHTML + '/' +td.innerHTML;
+                    
+                    const learningData = document.getElementById('learningTime');
+          
+                    learningData.value = clickedDate;
+          
+                    // alert('押したンゴ');
+                    console.log(title);
+                    console.log(clickedDate);
+                    console.log(learningData.value);
+          
+          
+                    })
+                
             });
             document.querySelector('tbody').appendChild(tr);
         })
     }
+
+    //学習日表示
+    function renderTitle(){
+        const title = `${year}/${String(month + 1).padStart(2,'0')}`;
+        document.getElementById('title').textContent = title;
+      }
 
     function createCalendar() {
         //clearCalendar,renderTitle,renderWeeksをよびだす
@@ -166,12 +177,6 @@ console.clear();
 
         createCalendar()
     })
-
-    // document.getElementById('today').addEventListener('click', () => {
-    //     year = today.getFullYear();
-    //     month = today.getMonth();
-    //     createCalendar()
-    // });
 
     document.getElementById('next').addEventListener('click', () => {
         month++;

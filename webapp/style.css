@@ -97,6 +97,10 @@ body {
      /* 右と左に分ける  1対1対 */
      grid-template-columns: 1fr 1fr;
    }
+
+   .modal3 {
+    display: none;
+   }
    /* activeクラスのついたモーダルウィンドウ */
    .modal.active,
    .modal2.active {
@@ -168,10 +172,14 @@ body {
    /* チェックボックスの選択肢をまるで囲む */
    /* チェックボックスデザイン */
    /* 元々のチェックボックス（非表示） */
-   .studycontent input[type="checkbox"],
+   /* .studycontent input[type="checkbox"],
    .language input[type="checkbox"],
-   twittershare input[type="checkbox"]{
+   .twittershare input[type="checkbox"]{
      display: none;
+   } */
+
+   input[type='checkbox'] {
+    display:none;
    }
    /* チェックボックスの代わりを成すラベル */
    .studycontent input[type="checkbox"]+label,
@@ -186,8 +194,8 @@ body {
    }
    /* ラベルの左に表示させる正方形のボックス□ */
    .studycontent input[type="checkbox"]+label::before,
-   .language input[type="checkbox"]+label::before,
-   .twittershare input[type="checkbox"]+label::before{
+   /* .language input[type="checkbox"]+label::before, */
+   .twittershare input[type="checkbox"]+label::before, .sample1::before{
      content: "";
      position: absolute;
      display: block;
@@ -198,10 +206,11 @@ body {
      left: 0;
      top: 50%;
      border: 1px solid;
-     border-color:  #325aa8; /* 枠の色変更 お好きな色を */
-     background-color: #325aa8; /* 背景の色変更 お好きな色を */
+     border-color:  #325aa8; 
+     background-color: #325aa8; 
      border-radius: 50%;
    }
+
    /* チェックが入った時のレ点 */
    .studycontent input[type="checkbox"]:checked+label::after,
    .language input[type="checkbox"]:checked+label::after,
@@ -293,27 +302,26 @@ body {
      text-align: center;
    }
 
+   .box-hour-all {
+    padding-top: 15px;
+   }
+
    .box-hour-1 {
     color: #1760a0;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
    }
 
    .box-hour-2 {
-    font-weight: 500;
-    font-size: 30px;
+    font-weight: 800;
+    font-size: 40px;
    }
 
    .box-hour-3 {
     color: #ccc;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
    }
-
-   .box-hour p {
-    gap: 5px;
-   }
-   
 
    .box-hour {
      background-color: #fff;
@@ -365,16 +373,6 @@ body {
   } 
 
 
-  
-
-
-   .month {
-     padding-bottom: 30%;
-     padding-left: 70%;
-   }
-
-
-
    /* ----棒グラフ---- */
    #ex_chart {max-width:640px;max-height:480px;}
 
@@ -385,34 +383,42 @@ body {
    }
 
    /* 2020年10月 */
-   .month {
+   .month-left{
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 10px solid #325aa8;
+    border-bottom: 10px solid transparent;
+  }
+  
+  .month-right{
+    width: 0;
+    height: 0;
+    border-left: 10px solid #97b9d1;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+  
+  .month{
     display: flex;
     justify-content: center;
-   }
-
-   .month-wrapper {
+    padding-bottom: 30%;
+    padding-left: 150px;
+    padding-top: 40px;
+  }
+  
+  .month-Wrapper{
     width: 200px;
     display: flex;
     justify-content: space-between;
-   }
-
-   .month-left {
-    color: #325aa8;
-   }
-
-   .month-center {
-    width: 15px;
-   }
-
-   .month-right {
-    color: gray;
-   }
-
+  }
 
    /* ---記録・完了しました--- */
    .afterlording-complete {
     text-align: center;
     padding-top: 20%;
+    /* TOPから消した */
+    display: none;
    }
 
 

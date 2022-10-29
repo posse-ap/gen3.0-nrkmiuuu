@@ -32,10 +32,8 @@
 
 
         <!-- モーダルウィンドウ -->
-        <!-- クリックしたらモーダルを表示するボタン -->
         <!-- オーバーレイ（黒い背景） -->
         <div class="overlay"></div>
-        <!-- モーダルウィンドウ -->
         <div class="modal">
             <div class="close">×</div>
 
@@ -44,29 +42,66 @@
                 <form action="" method="post">
                     <p>学習日<br>
                     <div class="studyday">
-                        <input type="text" name="date" class="modal_date" id="date">
-                        <div class="overlay4"></div>
-                        <a href="./calendar/calendar.html"></a>
+                        <!-- <input type="text" name="date" class="modal_date" id="date"> -->
+                        <div class="overlay4"> <input id="learningTime"></div>
+
+                        <!-- ----カレンダー---- -->
+                        <!-- <div class="carendar">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th id="prev">&laquo;</th>
+                                    <th id="title" colspan="5">2020/05</th>
+                                    <th id="next">&raquo;</th>
+                                </tr>
+                                <tr>
+                                    <th>Sun</th>
+                                    <th>Mon</th>
+                                    <th>Tue</th>
+                                    <th>Wed</th>
+                                    <th>Thu</th>
+                                    <th>Fri</th>
+                                    <th>Sat</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td id="today" colspan="7">Today</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div> -->
+                    <!-- ----カレンダー---- -->
+
+
+
                     </div>
                     </p>
                     <p>学習コンテンツ（複数選択可）<br>
                     <div class="studycontent">
-                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">N予備校</label>
-                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">ドットインストール</label>
-                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">POSSE課題</label>
+                        <input value="1" type="checkbox" id="install"><label for="install"
+                            class="sample1">ドットインストール</label>
+                        <input value="1" type="checkbox" id="submission"><label for="submission"
+                            class="sample1">POSSE課題</label>
+                        <input value="1" type="checkbox" id="Nschool"><label for="Nschool" class="sample1">N予備校</label>
                     </div>
                     </p>
 
                     <p>学習言語（複数選択可) <br>
                     <div class="language">
-                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">HTML</label>
-                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">CSS</label>
-                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">JavaScript</label>
-                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">PHP</label>
-                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">Laravel</label>
-                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">SQL</label>
-                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">SHELL</label>
-                        <input id="sample1" value="1" type="checkbox" checked><label for="sample1">情報システム（その他）</label>
+                        <input value="1" type="checkbox" id="HTML"><label for="HTML" class="sample1">HTML</label><br>
+                        <input value="1" type="checkbox" id="CSS"><label for="CSS" class="sample1">CSS</label>
+                        <input value="1" type="checkbox" id="JavaScript"><label for="JavaScript"
+                            class="sample1">JavaScript</label>
+                        <input value="1" type="checkbox" id="PHP"><label for="PHP" class="sample1">PHP</label>
+                        <input value="1" type="checkbox" id="Laravel"><label for="Laravel"
+                            class="sample1">Laravel</label>
+                        <input value="1" type="checkbox" id="SQL"><label for="SQL" class="sample1">SQL</label>
+                        <input value="1" type="checkbox" id="SHELL"><label for="SHELL" class="sample1">SHELL</label>
+                        <input value="1" type="checkbox" id="information"><label for="information"
+                            class="sample1">情報システム（その他）</label>
                     </div>
                     </p>
                 </form>
@@ -75,32 +110,25 @@
                 <div class="modal_right_1">
                     <p>学習時間<br>
                         <input type="text" name="date" class="modal_time">
-
                     </p>
                 </div>
                 <div class="modal_right_2">
                     <p>Twitter用コメント<br>
-                        <input type="text" name="date" class="modal_comment">
+                        <input type="text" name="date" class="modal_comment" id="modal_comment">
                     </p>
                 </div>
                 <div class="twittershare">
-                    <input id="sample1" value="1" type="checkbox" checked><label for="sample1">twitterにシェアする</label>
+                    <input value="1" type="checkbox" id="twitterSharing"><label for="twitterSharing"
+                        class="sample1">twitterにシェアする</label>
                 </div>
-
-
             </div>
-            <!-- モーダルウィンドウ内の記録・投稿完了 -->
 
+            <!-- モーダルウィンドウ内の記録・投稿完了 -->
             <div class="header-next" id="open2">
                 記録・投稿
             </div>
         </div>
-
-        <!-- モーダルウィンドウ -->
-        <!-- クリックしたらモーダルを表示するボタン -->
-        <!-- オーバーレイ（黒い背景） -->
         <div class="overlay2"></div>
-        <!-- モーダルウィンドウ -->
         <div class="modal2">
             <div class="close2">×</div>
             <div class="loader loader--style3" title="2">
@@ -114,36 +142,43 @@
                     </path>
                 </svg>
             </div>
+        </div>
 
-            <!-- 完了画面 -->
-            <div class="overlay3"></div>
-            <div class="modal3">
-                <div class="close3">×</div>
-                <div class="afterlording-complete">
-                    <img src="./img/complete3.jpg" alt="びっくりマーク">
-                    <p class="afterlording-complete-top">記録・投稿</p>
-                    <p class="afterlording-complete-bottom">完了しました</p>
-                </div>
+        <!-- 完了画面 -->
+        <div class="overlay3"></div>
+        <div class="modal3">
+            <div class="close3">×</div>
+            <div class="afterlording-complete">
+                <img src="./img/complete3.jpg" alt="びっくりマーク">
+                <p class="afterlording-complete-top">記録・投稿</p>
+                <p class="afterlording-complete-bottom">完了しました</p>
             </div>
         </div>
     </header>
+
     <main class="container">
         <div class="box-wrapper1">
             <ul class="hour">
                 <li class="box-hour">
-                    <p class="box-hour-1">Today</p>
-                    <p class="box-hour-2">3</p>
-                    <p class="box-hour-3">hour</p>
+                    <div class="box-hour-all">
+                        <div class="box-hour-1">Today</div>
+                        <div class="box-hour-2">3</div>
+                        <div class="box-hour-3">hour</div>
+                    </div>
                 </li>
                 <li class="box-hour">
-                    <p class="box-hour-1">Month</p>
-                    <p class="box-hour-2">120</p>
-                    <p class="box-hour-3">hour</p>
+                    <div class="box-hour-all">
+                    <div class="box-hour-1">Month</div>
+                    <div class="box-hour-2">120</div>
+                    <div class="box-hour-3">hour</div>
+                </div>
                 </li>
                 <li class="box-hour">
-                    <p class="box-hour-1">Total</p>
-                    <p class="box-hour-2">1348</p>
-                    <p class="box-hour-3">hour</p>
+                    <div class="box-hour-all">
+                    <div class="box-hour-1">Total</div>
+                    <div class="box-hour-2">1348</div>
+                    <div class="box-hour-3">hour</div>
+                    </div>
                 </li>
             </ul>
             <div class="box2">
@@ -161,10 +196,10 @@
             </div>
         </div>
         <div class="month">
-            <div class="month-wrapper">
-                <div class="month-left">＜</div>
-                <div class="month-center">2020年10月</div>
-                <div class="month-right"> ＞</div>
+            <div class="month-Wrapper">
+                <div class="month-left"></div>
+                <p>2020年10月</p>
+                <div class="month-right"></div>
             </div>
         </div>
     </main>

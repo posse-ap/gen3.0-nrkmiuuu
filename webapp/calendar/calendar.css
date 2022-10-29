@@ -41,3 +41,7 @@ td.today{
     cursor: pointer;
     user-select: none;
 }
+
+#prev {
+    color: blue;
+}

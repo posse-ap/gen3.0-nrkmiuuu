@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- レスポンシブ -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>TOP画面</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./chart/line.js" defer></script>
@@ -43,6 +45,7 @@
                     <p>学習日<br>
                     <div class="studyday">
                         <input type="text" name="date" class="modal_date" id="date">
+                        <div class="overlay4"></div>
                         <a href="./calendar/calendar.html"></a>
                     </div>
                     </p>
@@ -158,9 +161,11 @@
             </div>
         </div>
         <div class="month">
-            <div class="month-left">＜</div>
-            <div class="month-center">2020年10月</div>
-            <div class="month-right"> ＞</div>
+            <div class="month-wrapper">
+                <div class="month-left">＜</div>
+                <div class="month-center">2020年10月</div>
+                <div class="month-right"> ＞</div>
+            </div>
         </div>
     </main>
 

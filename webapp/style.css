@@ -385,6 +385,17 @@ body {
    }
 
    /* 2020年10月 */
+   .month {
+    display: flex;
+    justify-content: center;
+   }
+
+   .month-wrapper {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+   }
+
    .month-left {
     color: #325aa8;
    }
@@ -393,7 +404,7 @@ body {
     width: 15px;
    }
 
-   month-right {
+   .month-right {
     color: gray;
    }
 
@@ -404,3 +415,56 @@ body {
     padding-top: 20%;
    }
 
+
+   /* -----------レスポンシブ----------------- */
+   @media screen and (max-width: 480px) {
+    /* 480px以下に適用されるCSS（スマホ用） */
+
+    .container {
+      margin: 0 auto;
+      gap: 20px;
+      padding-top: 50px;
+      grid-template-columns: 1fr 1fr;
+      background-color: #E3EAF0;
+    }
+
+    .box-wrapper1 {
+      gap: 20px;
+    }
+
+
+    .hour {
+      display: flex;
+    }
+
+    .box-hour {
+      width: 135px; 
+      height: 135px;
+    }
+
+    .box2 {
+      width: 220px;
+      padding: 16px, 20px, 16px,20px;
+    }
+
+    .box-wrapper2 {
+      display: flex;
+    }
+
+    .box3  {
+      width: 210px;
+    }
+
+    #line_chart {
+      width:220px;
+      height: 250px;
+    }
+
+    #language_doughnut {
+      width: 200px;
+      height: 400px;
+    }
+
+
+
+  }

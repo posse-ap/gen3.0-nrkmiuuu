@@ -33,6 +33,8 @@ const overlay2 = document.querySelector('.overlay2');
 const modal3 = document.querySelector('.modal3');
 const overlay3 = document.querySelector('.overlay3');
 
+console.log(modal3);
+
 const TwitterText = document.getElementById('twitterSharing');
 // ボタンをクリックしたら、モダルとオーバーレイに.activeを付ける
 btn2.addEventListener('click', function (e) {
@@ -54,7 +56,7 @@ btn2.addEventListener('click', function (e) {
 
   //３を消しておいて3秒たったら３を出現させる
   modal3.classList.remove('active');
-  modal.classList.add('active');
+  // modal.classList.add('active');
 
 //twitterをひらく
   function twitterOpen(){
@@ -79,7 +81,7 @@ const afterLoading = function () {
   overlay2.classList.remove('active');
   modal3.classList.add('active');
   overlay3.classList.add('active');
-}
+};
 
 //カレンダー
 var learningTime = document.getElementById('learningTime');

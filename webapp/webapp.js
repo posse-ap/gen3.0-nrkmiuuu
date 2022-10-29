@@ -81,4 +81,13 @@ const afterLoading = function () {
   overlay3.classList.add('active');
 }
 
+//カレンダー
+var learningTime = document.getElementById('learningTime');
+var fp = flatpickr(learningTime);
+
+var learningTime = document.getElementById('learningTime');
+var fp = flatpickr(learningTime, {
+    dateFormat: 'Y-n-j(l)' // フォーマットの変更
+});
+
 

@@ -131,23 +131,18 @@ console.clear();
 
 
                 //学習日入力
-                td.addEventListener('click',()=>{
+                // td.addEventListener('click',()=>{
 
-                    const yearMonth = document.getElementById('title');
+                //     const yearMonth = document.getElementById('title');
           
-                    const clickedDate = yearMonth.innerHTML + '/' +td.innerHTML;
+                //     const clickedDate = yearMonth.innerHTML + '/' +td.innerHTML;
                     
-                    const learningData = document.getElementById('learningTime');
+                //     const learningData = document.getElementById('learningTime');
           
-                    learningData.value = clickedDate;
-          
-                    // alert('押したンゴ');
-                    console.log(title);
-                    console.log(clickedDate);
-                    console.log(learningData.value);
+                //     learningData.value = clickedDate;
           
           
-                    })
+                //     })
                 
             });
             document.querySelector('tbody').appendChild(tr);
@@ -155,10 +150,10 @@ console.clear();
     }
 
     //学習日表示
-    function renderTitle(){
-        const title = `${year}/${String(month + 1).padStart(2,'0')}`;
-        document.getElementById('title').textContent = title;
-      }
+    // function renderTitle(){
+    //     const title = `${year}/${String(month + 1).padStart(2,'0')}`;
+    //     document.getElementById('title').textContent = title;
+    //   }
 
     function createCalendar() {
         //clearCalendar,renderTitle,renderWeeksをよびだす

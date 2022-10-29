@@ -16,6 +16,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
     <!-- datalabelsプラグインを呼び出す -->
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <!-- カレンダー -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 
 <body>
@@ -42,40 +45,9 @@
                 <form action="" method="post">
                     <p>学習日<br>
                     <div class="studyday">
-                        <!-- <input type="text" name="date" class="modal_date" id="date"> -->
-                        <div class="overlay4"> <input id="learningTime"></div>
-
-                        <!-- ----カレンダー---- -->
-                        <!-- <div class="carendar">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th id="prev">&laquo;</th>
-                                    <th id="title" colspan="5">2020/05</th>
-                                    <th id="next">&raquo;</th>
-                                </tr>
-                                <tr>
-                                    <th>Sun</th>
-                                    <th>Mon</th>
-                                    <th>Tue</th>
-                                    <th>Wed</th>
-                                    <th>Thu</th>
-                                    <th>Fri</th>
-                                    <th>Sat</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td id="today" colspan="7">Today</td>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </div> -->
-                    <!-- ----カレンダー---- -->
-
-
+                        <a href="./calendar/calendar.html"></a>
+                        <input type="text" name="date" class="modal_date" id="learningTime">
+                        <div class="overlay4"> </div>
 
                     </div>
                     </p>
@@ -168,16 +140,16 @@
                 </li>
                 <li class="box-hour">
                     <div class="box-hour-all">
-                    <div class="box-hour-1">Month</div>
-                    <div class="box-hour-2">120</div>
-                    <div class="box-hour-3">hour</div>
-                </div>
+                        <div class="box-hour-1">Month</div>
+                        <div class="box-hour-2">120</div>
+                        <div class="box-hour-3">hour</div>
+                    </div>
                 </li>
                 <li class="box-hour">
                     <div class="box-hour-all">
-                    <div class="box-hour-1">Total</div>
-                    <div class="box-hour-2">1348</div>
-                    <div class="box-hour-3">hour</div>
+                        <div class="box-hour-1">Total</div>
+                        <div class="box-hour-2">1348</div>
+                        <div class="box-hour-3">hour</div>
                     </div>
                 </li>
             </ul>

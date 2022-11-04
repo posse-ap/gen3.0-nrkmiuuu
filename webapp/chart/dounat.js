@@ -75,7 +75,8 @@ new Chart(contextLanguages, {
       formatter: (value, contextLanguages) => {
         return value + '%';
       },
-    }
+    },
+    responsive: true,
   },
   plugins: [dataLabelPlugin],
 

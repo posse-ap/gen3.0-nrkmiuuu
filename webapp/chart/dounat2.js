@@ -61,7 +61,7 @@ new Chart(contextContents, {
     legend: {
       position: 'bottom'
     },
-    responsive: false,
+    responsive: true,
   },
   plugins: [dataLabelPlugin],
 })

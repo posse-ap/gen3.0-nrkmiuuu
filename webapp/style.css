@@ -39,6 +39,11 @@ body {
   display: none;
 }
 
+
+.header-log-bottom {
+  display: none;
+}
+
 /* ----ヘッダー--- */
 .header-menu {
   justify-content: space-between;
@@ -377,6 +382,7 @@ body {
   margin-top: 50px;
 }
 
+/* 円グラフ */
 .box-wrapper2 {
   display: grid;
   gap: 20px;
@@ -416,9 +422,9 @@ svg rect {
 
 
 /* ----棒グラフ---- */
-#ex_chart {
-  max-width: 640px;
-  max-height: 480px;
+#line_chart {
+  width :200px;
+  height:100px;
 }
 
 /* 学習言語の位置 */
@@ -467,6 +473,9 @@ svg rect {
 }
 
 
+
+
+
 /* -----------レスポンシブ----------------- */
 @media screen and (max-width: 480px) {
   /* 480px以下に適用されるCSS（スマホ用） */
@@ -504,10 +513,48 @@ svg rect {
     align-items: center;
     cursor: pointer;
     border: 1px solid #ccc;
+    display: none;
+  }
+
+  #open-bottom {
+    padding: 12px;
+    background: linear-gradient(to right, #1760a0, #4699ca);
+    margin-top: -120px;
+    margin-bottom: 90px;
+    border-radius: 50px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 10px 10px 10px 0 rgba(60, 194, 235, 0.8);
+    color: #FFFFFF;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+
+  #open,
+  #open2 {
+    display: none;
   }
   
   #open .vanish {
     display: none;
+  }
+
+  .header-open3 {
+    padding: 12px;
+    background: linear-gradient(to right, #1760a0, #4699ca);
+    border-radius: 50px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 10px 10px 10px 0 rgba(60, 194, 235, 0.8);
+    color: #FFFFFF;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+
+  .header-log-bottom {
+    display :block;
   }
   
   /* ----ヘッダー--- */
@@ -568,9 +615,9 @@ svg rect {
     transition: .3s;
     border-radius: 20px;
     /* ２分割したい */
-    display: grid;
+    display: block;
     /* 右と左に分ける  1対1対 */
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
   }
   
   /* .modal3 {
@@ -788,7 +835,7 @@ svg rect {
   
   .hour {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
     height: 100px;
     padding: 16px;
@@ -844,11 +891,19 @@ svg rect {
     gap: 20px;
     grid-template-columns: repeat(2, 1fr);
     height: 200px;
+    margin-top: 16px;
   }
   
   .box3 {
     background-color: #fff;
+    width: 230px;
   }
+
+  #language_doughnut {
+    width:300px;
+    height:250px;
+  }
+  
   
   /* エラーページ */
   .error_content {
@@ -878,9 +933,9 @@ svg rect {
   
   
   /* ----棒グラフ---- */
-  #ex_chart {
-    max-width: 640px;
-    max-height: 480px;
+  #line_chart {
+    max-width: 480px;
+    height: 280px;
   }
   
   /* 学習言語の位置 */
@@ -911,7 +966,7 @@ svg rect {
     justify-content: center;
     padding-bottom: 30%;
     padding-left: 150px;
-    padding-top: 40px;
+    padding-top: 100px;
   }
   
   .month-Wrapper {
@@ -926,6 +981,10 @@ svg rect {
     padding-top: 20%;
     /* TOPから消した */
     /* display: none; */
+  }
+
+  #open3 {
+    display: block;
   }
   
 

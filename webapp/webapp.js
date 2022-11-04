@@ -3,12 +3,20 @@
 //--------------モーダルウィンドウ-----------------------
 // ボタン、モダル、モダルの閉じるボタン、オーバーレイを変数に格納
 const btn = document.querySelector('.header-log');
+const btnBottom = document.querySelector('.header-log-bottom');
 const modal = document.querySelector('.modal');
 const closeBtn = document.querySelector('.close');
 const overlay = document.querySelector('.overlay');
 
 // ボタンをクリックしたら、モダルとオーバーレイに.activeを付ける
 btn.addEventListener('click', function (e) {
+  // aタグのデフォルトの機能を停止する
+  e.preventDefault();
+  // モーダルとオーバーレイにactiveクラスを付与する
+  modal.classList.add('active');
+  overlay.classList.add('active');
+});
+btnBottom.addEventListener('click', function (e) {
   // aタグのデフォルトの機能を停止する
   e.preventDefault();
   // モーダルとオーバーレイにactiveクラスを付与する

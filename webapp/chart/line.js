@@ -24,9 +24,14 @@ window.onload = function () {
                         callback: function(value, index, values){
                             return  value +  'h'
                           }
-                    }
+                    },
+                    gridLines: false
                 }],
-              
+                xAxes:[
+                    {
+                        gridLines: false
+                    }
+                ]
             }
         },
     })

@@ -513,7 +513,7 @@ svg rect {
     align-items: center;
     cursor: pointer;
     border: 1px solid #ccc;
-    display: none;
+    /* display: none; */
   }
 
   #open-bottom {
@@ -531,8 +531,7 @@ svg rect {
     border: 1px solid #ccc;
   }
 
-  #open,
-  #open2 {
+  #open {
     display: none;
   }
   

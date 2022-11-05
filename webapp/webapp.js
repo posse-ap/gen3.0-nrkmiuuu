@@ -36,6 +36,7 @@ closeBtn.addEventListener('click', function () {
 const btn2 = document.querySelector('.header-next');
 const modal2 = document.querySelector('.modal2');
 const closeBtn2 = document.querySelector('.close2');
+const closeBtn3 = document.querySelector('.close3');
 const overlay2 = document.querySelector('.overlay2');
 
 const modal3 = document.querySelector('.modal3');
@@ -78,6 +79,11 @@ btn2.addEventListener('click', function (e) {
 
 // モダルの閉じるボタンをクリックしたら、モダルとオーバーレイのactiveクラスを外す
 closeBtn2.addEventListener('click', function () {
+  modal2.classList.remove('active');
+  overlay2.classList.remove('active');
+});
+
+closeBtn3.addEventListener('click', function () {
   modal2.classList.remove('active');
   overlay2.classList.remove('active');
 });

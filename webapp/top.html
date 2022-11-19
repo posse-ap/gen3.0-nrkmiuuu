@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- レスポンシブ -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <title>TOP画面</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./chart/line.js" defer></script>
+    <!-- 棒グラフ -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1"></script>
+    <!-- 円グラフ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <!-- datalabelsプラグインを呼び出す -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <!-- カレンダー -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-menu">
+            <div class="menu">
+                <img src="./img/logo.svg" alt="POSSEロゴ" class="header-logo">
+                <p class="header-menu-week">4week</p>
+            </div>
+            <div class="header-log" id="open">
+                記録・投稿
+            </div>
+        </div>
+
+
+        <!-- モーダルウィンドウ -->
+        <!-- オーバーレイ（黒い背景） -->
+        <div class="overlay"></div>
+        <div class="modal">
+            <div class="close">×</div>
+
+            <!-- テキストボックス -->
+            <div class="modal_left">
+                <form action="" method="post">
+                    <p>学習日<br>
+                    <div class="studyday">
+                        <a href="./calendar/calendar.html"></a>
+                        <input type="text" name="date" class="modal_date" id="learningTime">
+                        <div class="overlay4"> </div>
+
+                    </div>
+                    </p>
+                    <p>学習コンテンツ（複数選択可）<br>
+                    <div class="studycontent">
+                        <input value="1" type="checkbox" id="install"><label for="install"
+                            class="sample1">ドットインストール</label>
+                        <input value="1" type="checkbox" id="submission"><label for="submission"
+                            class="sample1">POSSE課題</label>
+                        <input value="1" type="checkbox" id="Nschool"><label for="Nschool" class="sample1">N予備校</label>
+                    </div>
+                    </p>
+
+                    <p>学習言語（複数選択可) <br>
+                    <div class="language">
+                        <input value="1" type="checkbox" id="HTML"><label for="HTML" class="sample1">HTML</label><br>
+                        <input value="1" type="checkbox" id="CSS"><label for="CSS" class="sample1">CSS</label>
+                        <input value="1" type="checkbox" id="JavaScript"><label for="JavaScript"
+                            class="sample1">JavaScript</label>
+                        <input value="1" type="checkbox" id="PHP"><label for="PHP" class="sample1">PHP</label>
+                        <input value="1" type="checkbox" id="Laravel"><label for="Laravel"
+                            class="sample1">Laravel</label>
+                        <input value="1" type="checkbox" id="SQL"><label for="SQL" class="sample1">SQL</label>
+                        <input value="1" type="checkbox" id="SHELL"><label for="SHELL" class="sample1">SHELL</label>
+                        <input value="1" type="checkbox" id="information"><label for="information"
+                            class="sample1">情報システム（その他）</label>
+                    </div>
+                    </p>
+                </form>
+            </div>
+            <div class="modal_right">
+                <div class="modal_right_1">
+                    <p>学習時間<br>
+                        <input type="text" name="date" class="modal_time">
+                    </p>
+                </div>
+                <div class="modal_right_2">
+                    <p>Twitter用コメント<br>
+                        <input type="text" name="date" class="modal_comment" id="modal_comment">
+                    </p>
+                </div>
+                <div class="twittershare">
+                    <input value="1" type="checkbox" id="twitterSharing"><label for="twitterSharing"
+                        class="sample1">twitterにシェアする</label>
+                </div>
+            </div>
+            <!-- モーダルウィンドウ内の記録・投稿完了 -->
+            <div class="header-next header-open3" id="open2">
+                記録・投稿
+            </div>
+            <!-- <div class="header-next header-open3" id="open2">
+                記録・投稿
+            </div> -->
+        </div>
+        <div class="overlay2"></div>
+        <div class="modal2">
+            <div class="close2">×</div>
+            <div class="loader loader--style3" title="2">
+                <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
+                    viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                    <path fill="#000"
+                        d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+                        <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25"
+                            to="360 25 25" dur="0.6s" repeatCount="indefinite" />
+                    </path>
+                </svg>
+            </div>
+        </div>
+
+        <!-- 完了画面 -->
+        <div class="overlay3"></div>
+        <div class="modal3">
+            <div class="close3">×</div>
+            <div class="afterlording-complete">
+                <img src="./img/complete3.jpg" alt="びっくりマーク">
+                <p class="afterlording-complete-top">記録・投稿</p>
+                <p class="afterlording-complete-bottom">完了しました</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="box-wrapper1">
+            <ul class="hour">
+                <li class="box-hour">
+                    <div class="box-hour-all">
+                        <div class="box-hour-1">Today</div>
+                        <div class="box-hour-2">3</div>
+                        <div class="box-hour-3">hour</div>
+                    </div>
+                </li>
+                <li class="box-hour">
+                    <div class="box-hour-all">
+                        <div class="box-hour-1">Month</div>
+                        <div class="box-hour-2">120</div>
+                        <div class="box-hour-3">hour</div>
+                    </div>
+                </li>
+                <li class="box-hour">
+                    <div class="box-hour-all">
+                        <div class="box-hour-1">Total</div>
+                        <div class="box-hour-2">1348</div>
+                        <div class="box-hour-3">hour</div>
+                    </div>
+                </li>
+            </ul>
+            <div class="box2">
+                <canvas id="line_chart"></canvas>
+            </div>
+        </div>
+        <div class="box-wrapper2">
+            <div class="box3">
+                <h2>学習言語</h2>
+                <canvas id="language_doughnut" width="400" height="350"></canvas>
+            </div>
+            <div class="box3">
+                <h2>学習コンテンツ</h2>
+                <canvas id="content_doughnut" width="400" height="300"></canvas>
+            </div>
+        </div>
+        <div class="month">
+            <div class="month-Wrapper">
+                <div class="month-left"></div>
+                <p>2020年10月</p>
+                <div class="month-right"></div>
+            </div>
+        </div>
+        <div class="header-log-bottom" id="open-bottom">
+            記録・投稿
+        </div>
+    </main>
+
+    <script src="./chart/line.js"></script>
+    <script src="./webapp.js"></script>
+    <script src="./calendar/calendar.js"></script>
+    <script src="./chart/dounat.js"></script>
+    <script src="./chart/dounat2.js"></script>
+
+</body>
+
+</html>

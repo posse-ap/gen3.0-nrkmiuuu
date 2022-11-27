@@ -15,10 +15,11 @@ services:
     environment:
       PMA_HOST: db
       PMA_USER: testuser
-      PMA_PASSWORD: tstpass
+      PMA_PASSWORD: testpass
     ports:
       - "8080:80"
     volumes:
       - phpmyadmin-data:/sessions
-    db-data:
-    phpmyadmin-data:
+volumes:
+  db-data:
+  phpmyadmin-data:
